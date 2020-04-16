@@ -1,0 +1,19 @@
+/**
+ * mixins, functions and variables for colours
+ */
+
+// general constants
+$black: #000;
+$white: #fff;
+
+// theme colours
+$main-colour: #222;
+$highlight-colour: #f0882b;
+$off-white: #f4f4f4;
+
+// specific colours
+$page-bg: $white;
+$heading-text: $main-colour;
+$body-text: $main-colour;
+$link-colour: currentColor;
+$focus-outline: rgba(#222, .5);

@@ -1,0 +1,11 @@
+.l-header {
+  flex: 0 0 200px;
+  margin-right: 150px;
+  max-width: 200px;
+  position: relative;
+
+  &__inner {
+    position: sticky;
+    top: $page-padding;
+  }
+}

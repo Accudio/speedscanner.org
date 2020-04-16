@@ -1,0 +1,7 @@
+.l-container {
+  @include container;
+
+  display: flex;
+  padding-bottom: $page-padding;
+  padding-top: $page-padding;
+}

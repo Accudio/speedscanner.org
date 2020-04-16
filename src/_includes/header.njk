@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/header.css"/>
+<header class="l-header">
+  <div class="l-header__inner">
+    <a class="l-header__logoWrap" href="/">
+      <img class="l-header__logo" src="/img/logo.svg" width="200" height="200" alt="Speedscanner">
+    </a>
+    <nav class="l-nav">
+      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+        listClass: 'l-nav__list',
+        listItemClass: 'l-nav__item',
+        listItemHasChildrenClass: 'l-nav__item--parent',
+        activeListItemClass: 'l-nav__item--active',
+        anchorClass: 'l-nav__link',
+        activeAnchorClass: 'l-nav__link--active',
+        activeKey: eleventyNavigation.key
+      }) | safe }}
+  </nav>
+  </div>
+</header>

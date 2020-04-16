@@ -1,0 +1,38 @@
+/**
+ * mixins, functions and variables for typography
+ */
+
+// families
+$fallback-fonts-sans: sans-serif;
+$fallback-fonts-serif: serif;
+$family-1: 'Inter', $fallback-fonts-sans;
+
+// general
+$font-size: 100%;
+$letter-spacing: -.02em;
+$line-height: 1.64;
+
+// headings
+$h-line-height: 1.25;
+$h-letter-spacing: -.005em;
+$h-size: (
+  h1: 2.25rem,
+  h2: 2rem,
+  h3: 1.75rem,
+  h4: 1.5rem,
+  h5: 1.25rem
+);
+$h-size-m: (
+  h1: 1.75rem,
+  h2: 1.5rem,
+  h3: 1.25rem,
+  h4: 1.1rem,
+  h5: 1rem
+);
+
+// weights
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-bold: 700;
+$font-black: 900;

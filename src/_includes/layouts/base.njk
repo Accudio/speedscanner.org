@@ -1,0 +1,37 @@
+{% import "icons.njk" as icons %}
+
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="profile" href="https://gmpg.org/xfn/11">
+
+  {% include "meta.njk" %}
+
+  <link rel="stylesheet" href="/css/main.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+
+  <div class="app">
+    <div class="l-container">
+      {% include "header.njk" %}
+
+      <main class="l-main">
+        <section class="s-content">
+          {{ content | safe }}
+        </section>
+      </main>
+    </div>
+
+    {% include "footer.njk" %}
+  </div>
+
+  <script type="module" src="/js/main.js"></script>
+  <script nomodule src="/js/main-es5.js"></script>
+</body>
+</html>

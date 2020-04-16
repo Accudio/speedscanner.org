@@ -1,0 +1,68 @@
+.o-navToggle {
+  $self: &;
+
+  appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  height: 100%;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: -.425em;
+  outline: none;
+  padding: .5em .425em;
+  position: relative;
+  transform: none;
+  z-index: 101;
+
+  &__burger {
+    height: 1em;
+    position: relative;
+    transition: margin-top .5s;
+    width: 1.125em;
+    z-index: 5;
+  }
+
+  &__bar {
+    background: $main-colour;
+    border-radius: .125rem;
+    display: block;
+    height: .125em;
+    left: 0;
+    margin-top: -.0625em;
+    position: absolute;
+    top: 50%;
+    transition: all .3s, color .1s;
+    width: 100%;
+
+    &:first-child {
+      top: .125em;
+    }
+
+    &:last-child {
+      top: .875em;
+    }
+  }
+
+  &.is-active {
+    #{$self}__bar {
+      opacity: 0;
+      top: 50%;
+
+      &:first-child {
+        opacity: 1;
+        transform: rotate(225deg);
+      }
+
+      &:last-child {
+        opacity: 1;
+        transform: rotate(-225deg);
+      }
+    }
+  }
+}

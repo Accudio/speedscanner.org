@@ -1,0 +1,21 @@
+.o-icon {
+  $self: &;
+  align-self: center;
+  display: flex;
+
+  &__svg {
+    fill: currentColor;
+    height: 1em;
+    width: 1em;
+  }
+
+  &.inline {
+    display: inline-flex;
+
+    #{$self}__svg {
+      position: relative;
+      top: .1em;
+      vertical-align: middle;
+    }
+  }
+}

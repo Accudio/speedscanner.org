@@ -1,0 +1,10 @@
+{
+  "name": "Speedscanner",
+  "shortDesc": "Description",
+  "url": "http://localhost:8000",
+  "paths": {
+    "src": "src",
+    "includes": "_includes",
+    "output": "_build"
+  }
+}

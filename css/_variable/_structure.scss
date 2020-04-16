@@ -1,0 +1,68 @@
+/**
+ * mixins, functions and variables for structure
+ */
+
+// containers
+$container-padding: 15px;
+$containers: (
+  small:  540px,
+  medium: 720px,
+  large:  960px,
+  xlarge: 1140px
+);
+
+// specific sizes
+$page-padding: 10vh;
+$section-padding: 40px;
+
+// container
+@mixin container() {
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  width: 100%;
+
+  @each $size, $width in $containers {
+    @include min-width($size) {
+      max-width: $width;
+    }
+  }
+}
+
+// full container (100% width)
+@mixin full-container() {
+  max-width: 100%;
+  padding: 0 $container-padding;
+}
+
+// row (negates container padding)
+@mixin row() {
+  margin-left: -$container-padding;
+  margin-right: -$container-padding;
+}
+
+// row (negates container padding)
+@mixin custom-row($padding) {
+  margin-left: -#{$padding}px;
+  margin-right: -#{$padding}px;
+
+  > * {
+    padding-left: #{$padding}px;
+    padding-right: #{$padding}px;
+  }
+}
+
+// aspect ratio boxes
+@mixin aspect-ratio($aspect-ratio: 1) {
+  &::before {
+    content: '';
+    float: left;
+    height: 0;
+    margin-left: -1px;
+    padding-top: $aspect-ratio * 100%;
+    width: 1px;
+  }
+
+  &::after {
+    @include clearfix;
+  }
+}
