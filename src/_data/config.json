@@ -1,7 +1,7 @@
 {
   "name": "Speedscanner",
-  "shortDesc": "Description",
-  "url": "http://localhost:8000",
+  "shortDesc": "Automated frontend website performance testing, tracking and monitoring; powered by WebPageTest",
+  "url": "https://speedscanner.org",
   "paths": {
     "src": "src",
     "includes": "_includes",
