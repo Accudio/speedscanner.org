@@ -1,12 +1,14 @@
-# Becci Shepherd
+# Speedscanner.org
 
-Static website for Becci Shepherd, developed by Alistair Shepherd
+[![GitHub](https://img.shields.io/badge/GitHub-Accudio-0366d6.svg)](https://github.com/Accudio) [![Twitter](https://img.shields.io/badge/Twitter-@accudio-1DA1F2.svg)](https://twitter.com/accudio) [![Website](https://img.shields.io/badge/Website-alistairshepherd.uk-4B86AF.svg)](https://alistairshepherd.uk)
 
-## Changelog
+Website for Speedscanner, a website monitoring tool powered by WebPageTest. Built with Eleventy and Parcel.
 
+## Version History
+
+- v1.0.0  - FIrst version for public release
 - v0.1.0  - Initial creation
 
-## Credits
+## License
 
-* Primitive https://taniarascia.github.io/primitive/, (C) 2015-2018 Tania Rascia., [MIT](https://opensource.org/licenses/MIT)
-* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
+Copyright &copy; 2020 [Alistair Shepherd](https://alistairshepherd.uk). Licensed under the [MPL-2.0 License](https://www.mozilla.org/en-US/MPL/2.0/).

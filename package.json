@@ -1,6 +1,6 @@
 {
   "name": "speedscanner.org",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "browserslist": "> 0.5%",
   "description": "Website for Speedscanner web performance monitoring. Hosted at speedscanner.org",
   "main": "index.html",
