@@ -7,9 +7,9 @@ $break: (
   small:  576px,
   medium: 768px,
   large:  992px,
-  nav:   1200px,
   xlarge: 1200px
 );
+$break: map-merge($break, (nav: map-get($break, medium)));
 
 // generate min-width media query
 @mixin min-width($min-breakpoint, $min-breakpoints: $break) {

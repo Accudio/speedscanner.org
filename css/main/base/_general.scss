@@ -40,6 +40,10 @@ body {
   background: $page-bg;
   overflow-y: scroll;
 
+  @include max-width(nav) {
+    text-align: center;
+  }
+
   &.no-scroll {
     margin-right: var(--scrollbar-width, #{$scrollbar-width});
     overflow: hidden;
@@ -60,6 +64,7 @@ body {
 
 p, ol, ul, dl, table {
   margin: 0 0 1.5rem;
+  text-align: left;
 }
 
 p:last-child {
@@ -110,6 +115,7 @@ pre {
   margin: 0 0 1.5rem;
   padding: 1rem;
   tab-size: 2;
+  text-align: left;
 
   code {
     font-family: Menlo, monospace;

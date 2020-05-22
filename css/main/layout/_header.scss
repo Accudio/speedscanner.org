@@ -1,11 +1,28 @@
 .l-header {
-  flex: 0 0 200px;
-  margin-right: 150px;
-  max-width: 200px;
-  position: relative;
+  @include max-width(nav) {
+    text-align: center;
+  }
+
+  @include min-width(nav) {
+    flex: 0 0 200px;
+    margin-right: 50px;
+    max-width: 200px;
+    position: relative;
+  }
+
+  @include min-width(large) {
+    margin-right: 150px;
+  }
 
   &__inner {
-    position: sticky;
-    top: $page-padding;
+    @include min-width(nav) {
+      position: sticky;
+      top: $page-padding;
+    }
+
+    @include max-width(nav) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 }

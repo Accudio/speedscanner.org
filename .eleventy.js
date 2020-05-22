@@ -3,7 +3,7 @@ const contentParser = require('./src/_includes/utils/transforms/contentParser.js
 const htmlDate = require('./src/_includes/utils/filters/htmlDate.js')
 // const pwaPlugin = require('eleventy-plugin-pwa')
 const errorOverlay = require('eleventy-plugin-error-overlay')
-const navigationPlugin = require("@11ty/eleventy-navigation");
+const navigationPlugin = require('@11ty/eleventy-navigation')
 const date = require('./src/_includes/utils/filters/date.js')
 const fs = require('fs')
 
