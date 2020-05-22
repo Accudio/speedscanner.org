@@ -1,0 +1,6 @@
+@import '_variable/all';
+
+@context app {
+  @import 'header/header';
+  @import 'header/nav';
+}

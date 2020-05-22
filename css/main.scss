@@ -1,12 +1,12 @@
-@import '../_variable/all';
+@import '_variable/all';
 
-@import 'base/all';
-@import 'objects/*';
+@import 'main/base/all';
+@import 'main/objects/*';
 
 // scope with .app to increase specificity above global using postcss (retains usefulness of sass ampersand variable)
 /* stylelint-disable-next-line scss/at-rule-no-unknown */
 @context app {
-  @import 'components/*';
-  @import 'layout/*';
-  @import 'sections/*';
+  @import 'main/components/*';
+  @import 'main/layout/*';
+  @import 'main/sections/*';
 }
