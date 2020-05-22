@@ -54,5 +54,28 @@
     display: block;
     padding: $link-padding-v $link-padding-h;
     text-decoration: none;
+
+    &[href^='http'] {
+      // external link
+      position: relative;
+
+      &:hover, &:focus {
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        color: rgba($body-text, .5);
+        content: '(external)';
+        font-size: .675rem;
+        font-style: italic;
+        font-weight: $font-light;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        transform: translate(.5em, -50%);
+      }
+    }
   }
 }

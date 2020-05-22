@@ -10,7 +10,15 @@
   {% include "meta.njk" %}
 
   <link rel="stylesheet" href="/css/main.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- google fonts -->
+  {% set fonts = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap' %}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="{{ fonts }}" />
+  <link rel="stylesheet"  href="{{ fonts }}" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="{{ fonts }}" />
+  </noscript>
 
   {% block head %}{% endblock %}
 </head>
@@ -22,6 +30,7 @@
       {% include "header.njk" %}
 
       <main class="l-main">
+        <link rel="stylesheet" href="/css/content.css"/>
         <section class="s-content">
           {{ content | safe }}
         </section>
