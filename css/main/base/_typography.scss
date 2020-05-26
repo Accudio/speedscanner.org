@@ -35,10 +35,10 @@ p a {
   font-weight: $font-bold;
   letter-spacing: $h-letter-spacing;
   line-height: $h-line-height;
-  margin: 0 0 1.5rem;
+  margin: 1.5rem 0;
 
-  &:not(:first-child) {
-    margin: 1.5rem 0;
+  &:first-child {
+    margin-top: 0;
   }
 }
 
@@ -48,28 +48,12 @@ h1, h2, h3 {
 
   &:not(:first-child) {
     margin-top: 2.5rem;
-
-    @include min-width(medium) {
-      margin-top: 3rem;
-    }
-  }
-
-  + {
-    #{$h} {
-      &:not(.dud) {
-        margin-top: 0;
-      }
-    }
   }
 }
 
 
 @each $heading in $sg-headings {
   #{$heading} {
-    font-size: map-get($map: $h-size-m, $key: $heading);
-
-    @include min-width(medium) {
-      font-size: map-get($map: $h-size, $key: $heading);
-    }
+    font-size: map-get($map: $h-size, $key: $heading);
   }
 }

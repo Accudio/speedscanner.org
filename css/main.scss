@@ -5,7 +5,6 @@
 // scope with .app to increase specificity above global using postcss (retains usefulness of sass ampersand variable)
 /* stylelint-disable-next-line scss/at-rule-no-unknown */
 @context app {
-  @import 'main/components/*';
   @import 'main/layout/*';
   @import 'main/sections/*';
 }

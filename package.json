@@ -1,7 +1,7 @@
 {
   "name": "speedscanner.org",
   "version": "1.0.0",
-  "browserslist": "> 0.5%",
+  "browserslist": "> 1%, not dead",
   "description": "Website for Speedscanner web performance monitoring. Hosted at speedscanner.org",
   "main": "index.html",
   "scripts": {
@@ -27,15 +27,14 @@
     "fix:js": "eslint --ignore-path .gitignore \"js/**/*.js\" --fix",
     "fix:css": "stylelint --ignore-path .gitignore \"css/**/*.scss\" --fix"
   },
-  "author": "Alistair Shepherd <alistair@accudio.com>",
-  "contributors": [
-    "Alistair Shepherd <alistair@accudio.com>"
-  ],
+  "author": "Alistair Shepherd <alistair@accudio.com> (https://alistairshepherd.uk/)",
+  "homepage": "https://speedscanner.org/",
   "license": "MPL-2.0",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-navigation": "^0.1.5",
     "@babel/core": "^7.9.6",
+    "@fullhuman/postcss-purgecss": "^2.2.0",
     "autoprefixer": "^9.4.4",
     "browser-sync": "^2.26.7",
     "eslint": "^5.3.0",
