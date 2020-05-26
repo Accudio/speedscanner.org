@@ -23,7 +23,7 @@ You will need the following **free** services to use Speedscanner. Alternatives 
 1. Create database, no particular name necessary.
 2. Create an API key from "Security" with "Server" role.
 3. Make a note of the Key Secret, we will use this later and you can only see it once.
-4. Create two collections. One will contain page configuration, the other your tests. For example 'site_pages' and 'site_pages'.
+4. Create two collections. One will contain page configuration, the other your tests. For example 'site_pages' and 'site_tests'.
 5. For each collection, add two new indexes. The first should be named as the collection but with `all_` prefixed, all other settings default. The second should be named as the collections but with `unique_` prefixed and `_id` suffixed. eg, `unique_site_pages_id`. Set Terms to `id` and check "Unique".
 6. Now we create our configuration documents in our page configuration collection. For each page you want to test, create a document in your pages collection with the following format (excluding comments):
 ```
