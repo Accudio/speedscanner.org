@@ -1,4 +1,3 @@
-const normalize = require('postcss-normalize')
 const autoprefixer = require('autoprefixer')
 const context = require('postcss-plugin-context')
 const increaseSpecificity = require('postcss-increase-specificity')
@@ -7,7 +6,6 @@ const purgecss = require('@fullhuman/postcss-purgecss')
 
 module.exports = {
   plugins: [
-    normalize(),
     autoprefixer(),
     context({
       app: increaseSpecificity({

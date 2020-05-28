@@ -43,14 +43,9 @@ p a {
 }
 
 // increased margin on additional headings
-h1, h2, h3 {
-  $h: &;
-
-  &:not(:first-child) {
-    margin-top: 2.5rem;
-  }
+* + h1, * + h2, * + h3 {
+  margin-top: 2.5rem;
 }
-
 
 @each $heading in $sg-headings {
   #{$heading} {
