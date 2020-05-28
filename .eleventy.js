@@ -80,14 +80,14 @@ module.exports = function(eleventyConfig) {
 
     let sources = []
     widths.forEach(width => {
-      sources.push(`${siteConfig.cloudinary.base}w_${width}/${siteConfig.cloudinary.path}${path}`)
+      sources.push([`${siteConfig.cloudinary.base}w_${width}/${siteConfig.cloudinary.path}${path}`, `${width}w`])
     })
 
     return outdent`<a href="${siteConfig.cloudinary.base}${siteConfig.cloudinary.path}${path}.png">
       <picture>
         ${formats.map(format => {
           return `<source type="image/${format}" srcset="${sources.map(source => {
-            return `${source}.${format}`
+            return `${source[0]}.${format} ${source[1]}`
           }).join(', ')}" sizes="${sizes.join(', ')}">`
         }).join('\n')}
         <img
