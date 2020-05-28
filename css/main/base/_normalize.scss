@@ -36,10 +36,10 @@ dd {
 
 /* Set core body defaults */
 body {
+  line-height: 1.5;
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -55,8 +55,9 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img {
-  max-width: 100%;
   display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 /* Natural flow and rhythm in articles by default */
@@ -75,9 +76,9 @@ select {
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
+    animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
   }
 }
