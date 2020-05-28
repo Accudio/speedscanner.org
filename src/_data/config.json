@@ -2,6 +2,10 @@
   "name": "Speedscanner",
   "shortDesc": "Automated frontend website performance testing, tracking and monitoring; powered by WebPageTest",
   "url": "https://speedscanner.org",
+  "cloudinary": {
+    "base": "https://res.cloudinary.com/accudio/image/upload/",
+    "path": "v1590694662/speedscanner.org/"
+  },
   "paths": {
     "src": "src",
     "includes": "_includes",

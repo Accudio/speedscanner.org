@@ -1,7 +1,7 @@
+const outdent = require('outdent')
 const htmlMinTransform = require('./src/_includes/utils/transforms/htmlmin.js')
 const contentParser = require('./src/_includes/utils/transforms/contentParser.js')
 const htmlDate = require('./src/_includes/utils/filters/htmlDate.js')
-// const pwaPlugin = require('eleventy-plugin-pwa')
 const errorOverlay = require('eleventy-plugin-error-overlay')
 const navigationPlugin = require('@11ty/eleventy-navigation')
 const date = require('./src/_includes/utils/filters/date.js')
@@ -50,8 +50,55 @@ module.exports = function(eleventyConfig) {
    * Add Plugins
    */
   eleventyConfig.addPlugin(errorOverlay)
-  eleventyConfig.addPlugin(navigationPlugin);
-  // eleventyConfig.addPlugin(pwaPlugin)
+  eleventyConfig.addPlugin(navigationPlugin)
+
+  /**
+   * Add Shortcodes
+   */
+  eleventyConfig.addShortcode('image', (path, alt, width, height) => {
+    if (alt === undefined) {
+      throw new Error(`Missing \`alt\` on image: ${path}`)
+    }
+
+    const formats = [
+      'webp',
+      'jpeg'
+    ]
+    const widths = [
+      '760',
+      '580',
+      '440',
+      '510'
+    ]
+    const sizes = [
+      '(min-width: 1200px) 760px',
+      '(min-width: 992px) 580px',
+      '(min-width: 768px) 440px',
+      '(min-width: 576px) 510px',
+      'calc(100vw - 30px)'
+    ]
+
+    let sources = []
+    widths.forEach(width => {
+      sources.push(`${siteConfig.cloudinary.base}w_${width}/${siteConfig.cloudinary.path}${path}`)
+    })
+
+    return outdent`<a href="${siteConfig.cloudinary.base}${siteConfig.cloudinary.path}${path}.png">
+      <picture>
+        ${formats.map(format => {
+          return `<source type="image/${format}" srcset="${sources.map(source => {
+            return `${source}.${format}`
+          }).join(', ')}" sizes="${sizes.join(', ')}">`
+        }).join('\n')}
+        <img
+          alt="${alt}"
+          src="${siteConfig.cloudinary.base}w_${width}/${siteConfig.cloudinary.path}${path}"
+          width="${width}"
+          height="${height}"
+          loading="lazy">
+      </picture>
+    </a>`
+  })
 
   /**
    * Customise markdown
@@ -104,6 +151,6 @@ module.exports = function(eleventyConfig) {
     passthroughFileCopy: true,
     templateFormats: ['njk', 'md'],
     htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk'
   }
 }
