@@ -14,7 +14,7 @@ Until recently, [SpeedTracker](https://speedtracker.org/) offered a free open-so
 
 Whatever your need, SpeedScanner can help you easily monitor the performance of websites for free.
 
-![Dashboard of a speedscanner installation](/img/screenshot-1.png =760x428)
+{% image 'screenshot-1', 'Dashboard of a speedscanner installation', 760, 428 %}
 
 ## Features
 
