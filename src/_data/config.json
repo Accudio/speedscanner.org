@@ -10,5 +10,6 @@
     "src": "src",
     "includes": "_includes",
     "output": "_build"
-  }
+  },
+  "monetisation": "$ilp.uphold.com/EYBHKJjWP8Fq"
 }
