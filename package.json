@@ -48,7 +48,7 @@
     "postcss-focus-visible": "^4.0.0",
     "postcss-increase-specificity": "^0.6.0",
     "postcss-plugin-context": "^2.0.0",
-    "stylelint": "^9.4.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-sass-guidelines": "^5.0.0",
     "stylelint-scss": "^3.2.0"
   },
